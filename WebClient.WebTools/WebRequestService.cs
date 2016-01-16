@@ -27,15 +27,11 @@ namespace WebClient.WebTools
             return string.IsNullOrEmpty(data) ? _httpService.GetRequest(url) : _httpService.PostRequest(url, new Dictionary<string,string>());
         }
 
-        //TODO - Implement and test Real Url Validation
         private bool ValidateUrl(string url)
         {
-            if (url == "I am an invalid url")
-            {
-                return false;
-            }
+            Uri uriResult;
 
-            return true;
+            return Uri.TryCreate(url, UriKind.Absolute, out uriResult) && (uriResult.Scheme == Uri.UriSchemeHttp || uriResult.Scheme == Uri.UriSchemeHttps);
         }
 
         //TODO - Implement and test real data validation
