@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient.Console", "WebCli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient.WebTools", "WebClient.WebTools\WebClient.WebTools.csproj", "{F98AA68B-DCB9-4196-96D6-475CD4E85F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient.Tests", "UnitTestProject1\WebClient.Tests.csproj", "{204D0834-5017-4E55-AB58-225BD9025DFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient.Tests", "WebClient.Tests\WebClient.Tests.csproj", "{204D0834-5017-4E55-AB58-225BD9025DFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
