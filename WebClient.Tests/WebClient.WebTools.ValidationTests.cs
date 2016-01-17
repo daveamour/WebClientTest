@@ -136,5 +136,101 @@ namespace WebClient.Tests
 
             //No need to assert, just checking no exception is thrown
         }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario007_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "http://tempuri.org/service/myservice";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario008_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "https://tempuri.org/service/myservice";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario009_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "http://tempuri.org/service/myservice.aspx";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario010_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "https://tempuri.org/service/myservice.aspx";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario011_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "http://tempuri.org/service/myservice.asp";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario012_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "https://tempuri.org/service/myservice.asp";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario013_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "http://tempuri.org/service/my%20service.asp";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
+
+        [Test]
+        public void WebClient_CallUrlWithValidUrlScenario014_ArgumentExceptionThrown()
+        {
+            var webRequestService = new WebRequestService(_fakeHttpService);
+
+            const string validUrl = "https://tempuri.org/service/my%20service.asp";
+
+            webRequestService.CallUrl(validUrl, "{ name: \"Dave\" }");
+
+            //No need to assert, just checking no exception is thrown
+        }
     }
 }
