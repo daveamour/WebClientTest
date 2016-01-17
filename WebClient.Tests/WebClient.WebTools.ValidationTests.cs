@@ -66,7 +66,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario001_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario001_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -78,7 +78,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario002_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario002_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -90,7 +90,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario003_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario003_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -102,7 +102,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario004_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario004_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -114,7 +114,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario005_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario005_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -126,7 +126,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario006_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario006_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -138,7 +138,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario007_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario007_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -150,7 +150,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario008_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario008_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -162,7 +162,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario009_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario009_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -174,7 +174,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario010_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario010_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -186,7 +186,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario011_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario011_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -198,7 +198,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario012_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario012_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -210,7 +210,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario013_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario013_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -222,7 +222,7 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidUrlScenario014_ArgumentExceptionThrown()
+        public void WebClient_CallUrlWithValidUrlScenario014_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
