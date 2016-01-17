@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
 
 namespace WebClient.WebTools
 {
@@ -35,6 +37,9 @@ namespace WebClient.WebTools
         }
 
         //TODO - Implement and test real data validation
+        //I'm making the assumption that json strings have to be at 1 level only and equate to name value pairs which
+        //can be used to post to a web endpoint - so things like { name: "Dave", search: "true" } are valid but extra nesting
+        //on top of that is not valid
         private bool ValidateData(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -42,7 +47,19 @@ namespace WebClient.WebTools
                 return true;
             }
 
-            if (data == "bad json")
+            //This rules out mismatched braces and objects with too much depth without having to do any heavy lifting with NewtonSoft
+            if (data.Count(c => c == '{')!= 1 || data.Count(c => c == '}') != 1)
+            {
+                return false;
+            }
+
+            try
+            {
+                var myclass = Newtonsoft.Json.JsonConvert.DeserializeObject<dynamic>(data);
+
+                var oMyclass = Newtonsoft.Json.JsonConvert.DeserializeObject<Object>(data);
+            }
+            catch(JsonReaderException e)
             {
                 return false;
             }
