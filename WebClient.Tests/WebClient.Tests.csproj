@@ -57,7 +57,8 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="WebClient.WebTools.ValidationTests.cs" />
+    <Compile Include="WebClient.WebTools.DataValidationTests.cs" />
+    <Compile Include="WebClient.WebTools.UrlValidationTests.cs" />
     <Compile Include="WebClient.WebTools.Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

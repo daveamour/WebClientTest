@@ -6,11 +6,11 @@ using WebClient.WebTools;
 namespace WebClient.Tests
 {
     [TestFixture]
-    public class ValidationTests
+    public class UrlValidationTests
     {
         private readonly IHttpService _fakeHttpService;
 
-        public ValidationTests()
+        public UrlValidationTests()
         {
             _fakeHttpService = A.Fake<IHttpService>();
         }
