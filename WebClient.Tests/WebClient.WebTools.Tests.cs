@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using FakeItEasy;
 using NUnit.Framework;
 using WebClient.WebTools;
@@ -34,11 +35,11 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidArgs_NoExceptionThrown()
+        public async Task WebClient_CallUrlWithValidArgs_NoExceptionThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
-            webRequestService.CallUrl(ServiceUrl, "{ name: \"Dave\" }");
+            await webRequestService.CallUrl(ServiceUrl, "{ name: \"Dave\" }");
 
             //No need to explicitly assert anything, we just want no exception
         }
@@ -60,19 +61,19 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidArgsAndNullData_GetRequestIsMade()
+        public async Task WebClient_CallUrlWithValidArgsAndNullData_GetRequestIsMade()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
             var url = ServiceUrl;
 
-            webRequestService.CallUrl(url, null);
+            await webRequestService.CallUrl(url, null);
 
             A.CallTo(() => _fakeHttpService.GetRequest(url)).MustHaveHappened();
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidArgsAndEmptyStringForData_GetRequestIsMade()
+        public async Task WebClient_CallUrlWithValidArgsAndEmptyStringForData_GetRequestIsMade()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -80,13 +81,13 @@ namespace WebClient.Tests
 
             var data = "";
 
-            webRequestService.CallUrl(url, data);
+            await webRequestService.CallUrl(url, data);
 
             A.CallTo(() => _fakeHttpService.GetRequest(url)).MustHaveHappened();
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidArgsAndRealData_PostRequestIsMade()
+        public async Task WebClient_CallUrlWithValidArgsAndRealData_PostRequestIsMade()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
@@ -94,7 +95,7 @@ namespace WebClient.Tests
 
             var data = "{ name: \"Dave\" }";
 
-            webRequestService.CallUrl(url, data);
+            await webRequestService.CallUrl(url, data);
 
             A.CallTo(() => _fakeHttpService.PostRequest(url, A<Dictionary<string,string>>.Ignored)).MustHaveHappened();
         }

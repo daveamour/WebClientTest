@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using FakeItEasy;
 using NUnit.Framework;
 using WebClient.WebTools;
@@ -47,37 +48,37 @@ namespace WebClient.Tests
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidDataScenario001_ArgumentExceptionNotThrown()
+        public async Task WebClient_CallUrlWithValidDataScenario001_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
             const string validData = "{ name: \"Dave\" }";
 
-            webRequestService.CallUrl(ValidUrl, validData);
+            await webRequestService.CallUrl(ValidUrl, validData);
 
             //No need to assert, just checking no exception is thrown
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidDataScenario002_ArgumentExceptionNotThrown()
+        public async Task WebClient_CallUrlWithValidDataScenario002_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
             const string validData = "{ name: \"Dave\", \"Age\" : 48 }";
 
-            webRequestService.CallUrl(ValidUrl, validData);
+            await webRequestService.CallUrl(ValidUrl, validData);
 
             //No need to assert, just checking no exception is thrown
         }
 
         [Test]
-        public void WebClient_CallUrlWithValidDataScenario003_ArgumentExceptionNotThrown()
+        public async Task WebClient_CallUrlWithValidDataScenario003_ArgumentExceptionNotThrown()
         {
             var webRequestService = new WebRequestService(_fakeHttpService);
 
             const string validData = "{ name: \"Dave\", \"Age\" : 48, \"Sex\" : \"male\" }";
 
-            webRequestService.CallUrl(ValidUrl, validData);
+            await webRequestService.CallUrl(ValidUrl, validData);
 
             //No need to assert, just checking no exception is thrown
         }

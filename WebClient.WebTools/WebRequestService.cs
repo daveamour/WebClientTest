@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace WebClient.WebTools
 {
@@ -14,7 +15,7 @@ namespace WebClient.WebTools
             _httpService = httpService;
         }
 
-        public string CallUrl(string url, string data)
+        public async Task<string> CallUrl(string url, string data)
         {
             if (!ValidateUrl(url))
             {
@@ -26,7 +27,7 @@ namespace WebClient.WebTools
                 throw new ArgumentException("Invalid Json Payload", nameof(data));
             }
 
-            return string.IsNullOrEmpty(data) ? _httpService.GetRequest(url) : _httpService.PostRequest(url, new Dictionary<string,string>());
+            return string.IsNullOrEmpty(data) ? await _httpService.GetRequest(url) : _httpService.PostRequest(url, new Dictionary<string,string>());
         }
 
         private bool ValidateUrl(string url)
@@ -59,7 +60,7 @@ namespace WebClient.WebTools
 
                 var oMyclass = Newtonsoft.Json.JsonConvert.DeserializeObject<Object>(data);
             }
-            catch(JsonReaderException e)
+            catch(JsonReaderException)
             {
                 return false;
             }
